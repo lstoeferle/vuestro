@@ -1,0 +1,31 @@
+{
+  "name": "vuestro",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint './**/*.{astro,vue,ts,js}'",
+    "lint:fix": "eslint './**/*.{astro,vue,ts,js}' --fix"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "2.0.1",
+    "@astrojs/vue": "1.0.2",
+    "@iconify-json/ri": "1.1.3",
+    "@typescript-eslint/eslint-plugin": "5.38.0",
+    "@typescript-eslint/parser": "5.38.0",
+    "astro": "1.3.0",
+    "daisyui": "2.31.0",
+    "eslint": "8.23.1",
+    "eslint-plugin-astro": "0.19.0",
+    "eslint-plugin-vue": "9.5.1",
+    "husky": "8.0.1",
+    "unplugin-icons": "0.14.10",
+    "vue": "3.2.39",
+    "@vueuse/core": "9.2.0"
+  }
+}

@@ -1,0 +1,31 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import Hero from "@/components/sections/Hero.astro"
+import Feature from '@/components/cards/Feature.astro'
+---
+
+<Layout title={import.meta.env.APP_NAME}>
+	<main>
+		<Hero />
+		<section class="container py-16">
+			<h2 class="text-4xl mb-16">Integrations</h2>
+			<div class=" grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+				<Feature 
+					title="Vue" 
+					description="An approachable, performant and versatile framework for building web user interfaces." 
+					action="Vue Docs" 
+					href={import.meta.env.VUE_URL} />
+				<Feature 
+					title="TailwindCSS" 
+					description="A utility-first CSS framework that can be composed to build any design, directly in your markup." 
+					action="TailwindCSS Docs" 
+					href={import.meta.env.TAILWINDCSS_URL} />
+				<Feature 
+					title="DaisyUI" 
+					description="The most popular, free and open-source Tailwind CSS component library" 
+					action="DaisyUI Docs" 
+					href={import.meta.env.DAISYUI_URL} />
+			</div>
+		</section>
+	</main>
+</Layout>

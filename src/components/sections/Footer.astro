@@ -1,0 +1,30 @@
+---
+import IcTwitter from "~icons/ri/twitter-fill"
+import IcGitHub from "~icons/ri/github-fill"
+---
+
+<footer class="p-10 bg-neutral text-neutral-content"> 
+    <div class="container footer">
+        <div>
+            <span class="footer-title">Legal</span> 
+            <a class="link link-hover" href="/impress/">Impress</a> 
+            <a class="link link-hover" href="/privacy-policy/">Privacy policy</a> 
+        </div> 
+        <div>
+            <span class="footer-title">Quicklinks</span> 
+            <a class="link link-hover" href="/">Home</a> 
+            <a class="link link-hover" href="/about/">About</a> 
+        </div> 
+        <div>
+        <span class="footer-title">Social</span> 
+        <div class="grid grid-flow-col">
+            <a class="btn btn-ghost" href={import.meta.env.TWITTER_URL} target="_blank">
+                <IcTwitter class="w-6 h-6" />
+            </a> 
+            <a class="btn btn-ghost" href={import.meta.env.GITHUB_URL} target="_blank">
+                <IcGitHub class="w-6 h-6" />
+            </a>
+        </div>
+        </div>
+    </div>
+</footer>

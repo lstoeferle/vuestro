@@ -1,0 +1,29 @@
+---
+import Navbar from "@/components/sections/Navbar.astro"
+import Footer from "@/components/sections/Footer.astro"
+import { useTheme } from "@/composables/useTheme"
+
+export interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+
+const { theme } = useTheme()
+---
+
+<html lang="en" data-theme={theme}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="pt-[64px] bg-base-300">
+    <Navbar />
+    <slot />
+    <Footer />
+  </body>
+</html>
+

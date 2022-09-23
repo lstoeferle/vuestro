@@ -1,0 +1,28 @@
+---
+import ThemeToggle from "@/components/controls/ThemeToggle.vue"
+import IcGitHub from "~icons/ri/github-fill"
+---
+
+<div class="navbar fixed top-0 z-50 bg-base-100">
+  <div class="container">
+      <div class="flex-1">
+        <a class="btn btn-ghost text-xl" href="/">
+          {import.meta.env.APP_NAME}
+        </a>
+       
+      </div>
+      <div class="flex items-center">
+        <a class="btn btn-ghost" href="/about/">
+          About
+        </a>
+
+        <a class="btn btn-ghost" href={import.meta.env.GITHUB_URL} target="_blank">
+          <IcGitHub class="w-6 h-6"/>
+        </a>
+
+        <!-- Hydrate as soon as page is ready to set the theme -->
+        <ThemeToggle client:idle/>
+      </div>
+  </div>
+</div>
+

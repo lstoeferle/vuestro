@@ -1,0 +1,23 @@
+---
+import GradientText from "@/components/typography/GradientText.astro"
+import IcExternalLink from "~icons/ri/external-link-fill"
+---
+<section class="hero min-h-screen bg-[url(https://images.unsplash.com/photo-1628126235206-5260b9ea6441?auto=format&fit=crop&w=640&q=80)]">
+    <div class="hero-overlay backdrop-blur-lg bg-base-300/75"></div>
+    <div class="hero-content">
+        <div>
+            <h1 class="text-5xl font-bold">
+                <GradientText>{import.meta.env.APP_NAME}</GradientText>
+            </h1>
+            <p class="py-6">
+                An opinionated Astro starter template with <br/>
+                Vue, TailwindCSS and DaisyUI integration.
+            </p>
+            <a href="https://docs.astro.build/en/getting-started/" target="_blank" class="btn btn-primary">
+                Getting Started
+                <IcExternalLink class="ml-2 w-4 h-4"/>
+            </a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1628126235206-5260b9ea6441?auto=format&fit=crop&w=640&q=80" class="mask mask-hexagon max-w-sm rounded-lg shadow-2xl" />
+    </div>
+</section>

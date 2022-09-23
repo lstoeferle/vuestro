@@ -1,0 +1,25 @@
+---
+import IcExternalLink from "~icons/ri/external-link-fill"
+
+export interface Props {
+    title: string
+    description: string
+    action: string
+    href: string
+}
+
+const { title, description, action, href } = Astro.props
+---
+
+<div class="card bg-base-100 shadow-xl">
+  <div class="card-body">
+    <h2 class="card-title text-secondary">{title}</h2>
+          <p>{description}</p>
+    <div class="card-actions justify-end">
+      <a {href} target="_blank" class="btn btn-secondary btn-outline">
+        {action}
+        <IcExternalLink class="ml-2 w-4 h-4"/>
+      </a>
+    </div>
+  </div>
+</div>
